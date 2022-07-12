@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100&display=swap');
+
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+:root {
+    --input-width: 230px;
+}
+
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;;
+}
+
+.left {
+    background: url("img/bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:50%;
+    min-width: 30%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+    font-size: min(2rem, 3.5vw);
+    margin-top: 25vh;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(253, 253, 253);
+}
+
+.right > div {
+    /* border: 1px solid red; */
+    flex-grow: 1;
+    /* padding: 3rem; */
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex: 1;
+    padding: 3rem;
+    max-width: 70%;
+}
+
+.col-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.fields {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(2.2 * var(--input-width));
+    gap: 20px;
+    font-size: .75rem;
+    color:rgb(56, 56, 56);
+}
+
+.shadow-wrap {
+    /* border: 1px solid red; */
+    background-color: white;
+    padding: 3rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.field input {
+    width: var(--input-width);
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.button-wrapper {
+    padding: 3rem;
+}
+
+button {
+    border: 0;
+    padding: 1em 3.5em;
+    border-radius: 10px;
+    background-color: #518eb4;
+    color: white;
+    font-weight: bold;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+
+.button-wrapper > p {
+    font-size: .85rem;
+}
+
+a {
+    font-weight: bold;
+    color: #518eb4;
+    text-decoration: none;
+}
+
+input {
+    outline: none;
+    transition: box-shadow .4s;
+    padding-left: 25px;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 157, 255, .6);
+}
+
+/* input:invalid {
+    background: url("img/check.svg") no-repeat;
+    background-size: 15px;
+    background-position: 5px;
+} */
+
+
+.input-field {
+    position: relative;
+}
+
+.input-field i {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.incorrect {
+    color: rgb(177, 34, 34);
+}
+
+.correct {
+    color: green
+}
+
+input:not(:placeholder-shown):not(.pass):invalid + .incorrect {
+    opacity: 1;
+}
+
+input:not(:placeholder-shown):not(.pass):valid ~ .correct {
+    opacity: 1;
+}
+
+#passmsg {
+    color: rgb(177, 34, 34);
+    margin: 0;
+    font-size: .7rem;
+    max-width: var(--input-width);
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.pass + .incorrect, .pass ~ .correct {
+    opacity: 1;
+}

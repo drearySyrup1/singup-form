@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/00b7214cf2.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="left">
+        <div class="logo">
+            <i class="fa-brands fa-xl fa-connectdevelop"></i>
+            CANE
+        </div>
+    </div>
+    <div class="right">
+        <div class="col-1">
+            <p>
+                This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+            </p>
+            <p>
+                You know what you want to
+            </p>
+        </div>
+        <div class="col-2">
+            <form action="">
+                <div class="shadow-wrap">
+                    <h2>Let's do this!</h2>
+                    <div class="fields">
+                        <div class="field">
+                            <label for="first_name">FIRST NAME</label>
+                            <div class="input-field">
+                                <input placeholder=" " id="first_name" type="text" minlength="2" maxlength="20" required>
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="last_name">LAST NAME</label>
+                            <div class="input-field">
+                                <input placeholder=" " id="last_name" minlength="2" maxlength="20" type="text" required>
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email">EMAIL</label>
+                            <div class="input-field">
+                                <input placeholder=" " maxlength="50" id="email" type="email" required>
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+                            </div>
+                        </div>                  <div class="field">
+                            <label for="tel">PHONE NUMBER</label>
+                            <div class="input-field">
+                                <input placeholder=" " maxlength="20" minlength="3" id="tel" pattern="[0-9]+" type="tel" required>
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="pass">PASSWORD</label>
+                            <div class="input-field">
+                                <input id="pass" class="pass" type="password" required
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@!#$%&()*+.])[A-Za-z\d@!#$%&()*+.]{8,}$"
+                                >
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+                            </div>
+                            
+                        </div>
+                        <div class="field">
+                            <label for="pass2">CONFIRM PASSWORD</label>
+                            <div class="input-field">
+                                <input id="pass2" class="pass" type="password" required>
+                                <i class="fa-solid fa-circle-xmark incorrect"></i>
+                                <i class="fa-solid fa-circle-check correct"></i>
+                            </div>
+                        </div>
+                        <div id="passmsg">
+                            <p>* Passwords do not match</p>
+                            <p>&nbsp;&nbsp;Minimum 8 characters long</p>
+                            <p>&nbsp;&nbsp;Minimum 1 uppercase and lowercase letter</p>
+                            <p>&nbsp;&nbsp;Minimum 1 number and special character</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button>Create Account</button>
+                    <p>Already have an account? <a href="">Log in</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
