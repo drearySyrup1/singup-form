@@ -7,7 +7,7 @@
 }
 
 :root {
-    --input-width: 230px;
+    --input-width: 240px;
 }
 
 
@@ -180,4 +180,8 @@ input:not(:placeholder-shown):not(.pass):valid ~ .correct {
 
 .pass + .incorrect, .pass ~ .correct {
     opacity: 1;
+}
+
+.green {
+    color: green;
 }

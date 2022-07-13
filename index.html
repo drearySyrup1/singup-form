@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/00b7214cf2.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="left">
@@ -85,10 +86,29 @@
                             </div>
                         </div>
                         <div id="passmsg">
-                            <p>* Passwords do not match</p>
-                            <p>&nbsp;&nbsp;Minimum 8 characters long</p>
-                            <p>&nbsp;&nbsp;Minimum 1 uppercase and lowercase letter</p>
-                            <p>&nbsp;&nbsp;Minimum 1 number and special character</p>
+                            <p id="match">
+                                <i class="fa-solid fa-circle-check correct hide"></i>
+                                * Passwords do not match
+                            </p>
+                            <p id="length">
+                                <i class="fa-solid fa-circle-check correct hide"></i>
+
+                                &nbsp;&nbsp;Minimum 8 characters long
+
+                            
+                            </p>
+
+                            <p id="upperlower">
+                                <i class="fa-solid fa-circle-check correct hide"></i>
+
+                                &nbsp;&nbsp;Minimum 1 uppercase and lowercase letter
+                            </p>
+
+                            <p id="numsym">
+                                <i class="fa-solid fa-circle-check correct hide"></i>
+
+                                &nbsp;&nbsp;Minimum 1 number and special character
+                            </p>
                        </div>
                     </div>
                 </div>
